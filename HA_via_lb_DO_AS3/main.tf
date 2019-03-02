@@ -40,6 +40,7 @@ resource "azurerm_public_ip" "vm01mgmtpip" {
   name                         = "${var.prefix}-vm01-mgmt-pip"
   location                     = "${azurerm_resource_group.main.location}"
   resource_group_name          = "${azurerm_resource_group.main.name}"
+  domain_name_label            = "${var.prefix}-vm01"  
   allocation_method = "Dynamic"
 
   tags {
@@ -56,6 +57,7 @@ resource "azurerm_public_ip" "vm02mgmtpip" {
   name                         = "${var.prefix}-vm02-mgmt-pip"
   location                     = "${azurerm_resource_group.main.location}"
   resource_group_name          = "${azurerm_resource_group.main.name}"
+  domain_name_label            = "${var.prefix}-vm02"
   allocation_method = "Dynamic"
 
   tags {
